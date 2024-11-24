@@ -24,7 +24,7 @@ function renderTasks() {
         taskText.textContent = (index + 1).toString() + ")  " + task.text;
 
         tdTask.appendChild(taskText);
-        tdTask.style.cssText = "width: 60%;";
+        tdTask.style.cssText = "width: 70%;";
 
         taskDiv.appendChild(tdTask);
 
@@ -33,9 +33,9 @@ function renderTasks() {
         const completeBtn = document.createElement('button');
 
         completeBtn.style.cssText =
-            "padding: 5px 5px; border: 1px solid grey; border-radius:4px;"
+            "padding: 10px 10px; border: 1px solid grey; border-radius:4px;"
 
-        completeBtn.textContent = task.completed ? 'Undo' : 'Complete';
+        completeBtn.textContent = task.completed ? 'UNDO' : 'COMPLETED';
         const tempColor = completeBtn.style.backgroundColor;
         completeBtn.onmouseenter = () => { completeBtn.style.backgroundColor = 'lightgrey'; };
         completeBtn.onmouseleave = () => { completeBtn.style.backgroundColor = tempColor; };
@@ -48,7 +48,7 @@ function renderTasks() {
         // Delete button
         const tdDelete = document.createElement('td');
         const deleteBtn = document.createElement('button');
-        deleteBtn.textContent = 'Delete';
+        deleteBtn.textContent = 'DELETE';
         deleteBtn.classList.add('delete-btn');
         deleteBtn.onclick = () => deleteTask(index);
 

@@ -5,6 +5,7 @@ body {
     background-color: #f4f4f4;
 }
 #app {
+    display:grid;
     max-width: 500px;
     min-width: 300px;
     margin: 0 auto;
@@ -60,7 +61,7 @@ h1 {
     color: white;
     border: none;
     cursor: pointer;
-    padding: 5px 10px;
+    padding: 10px 10px;
     border-radius: 4px;
 }
 .delete-btn:hover {
