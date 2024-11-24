@@ -21,10 +21,7 @@ function renderTasks() {
         const tdTask = document.createElement('td');
         const taskText = document.createElement('input');
 
-        if (task.text.includes((index + 1).toString()))
-            taskText.value = task.text
-        else
-            taskText.value = (index + 1).toString() + ")  " + task.text;
+        taskText.value = task.text
 
         if (task.completed) {
             taskText.style.cssText = "width: 95%; border: 0; font-size: larger; text-decoration: line-through; background-color: #d4edda; readonly"
