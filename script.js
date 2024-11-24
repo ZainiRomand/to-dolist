@@ -19,9 +19,24 @@ function renderTasks() {
 
         // Task content
         const tdTask = document.createElement('td');
-        const taskText = document.createElement('span');
+        const taskText = document.createElement('input');
 
-        taskText.textContent = (index + 1).toString() + ")  " + task.text;
+        if (task.text.includes((index + 1).toString()))
+            taskText.value = task.text
+        else
+            taskText.value = (index + 1).toString() + ")  " + task.text;
+
+        if (task.completed) {
+            taskText.style.cssText = "width: 95%; border: 0; font-size: larger; text-decoration: line-through; background-color: #d4edda; readonly"
+            taskText.disabled = true;
+        } else {
+            taskText.style.cssText = "width: 95%; border: 0; font-size: larger; background-color: #f9f9f9;"
+            taskText.disabled = false;
+        }
+
+        taskText.onchange = () => { tasks[index].text = taskText.value; }
+
+        //taskText.textContent = (index + 1).toString() + ")  " + task.text;
 
         tdTask.appendChild(taskText);
         tdTask.style.cssText = "width: 70%;";
