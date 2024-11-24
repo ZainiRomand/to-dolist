@@ -19,15 +19,16 @@ function renderTasks() {
 
         // Task content
         const tdTask = document.createElement('td');
-        const taskText = document.createElement('input');
+        const taskText = document.createElement('textarea');
 
         taskText.value = task.text
+        taskText.maxLength = 50;
 
         if (task.completed) {
-            taskText.style.cssText = "width: 95%; border: 0; font-size: larger; text-decoration: line-through; background-color: #d4edda; readonly"
+            taskText.style.cssText = "form-sizing: normal; width: 95%; border: 0; rows: 2; font-size: larger; text-decoration: line-through; background-color: #d4edda; readonly"
             taskText.disabled = true;
         } else {
-            taskText.style.cssText = "width: 95%; border: 0; font-size: larger; background-color: #f9f9f9;"
+            taskText.style.cssText = "form-sizing: normal; width: 95%; border: 0; rows: 2; font-size: larger; background-color: #f9f9f9;"
             taskText.disabled = false;
         }
 
