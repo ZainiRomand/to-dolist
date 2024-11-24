@@ -5,7 +5,6 @@ body {
     background-color: #f4f4f4;
 }
 #app {
-    display:grid;
     max-width: 500px;
     min-width: 300px;
     margin: 0 auto;
@@ -44,9 +43,9 @@ h1 {
 }
 .task {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    padding: 10px;
+    padding: 5px;
     background-color: #f9f9f9;
     margin-bottom: 10px;
     border-radius: 4px;
