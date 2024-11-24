@@ -35,7 +35,7 @@ function renderTasks() {
         completeBtn.style.cssText =
             "padding: 10px 10px; border: 1px solid grey; border-radius:4px;"
 
-        completeBtn.textContent = task.completed ? 'UNDO' : 'COMPLETED';
+        completeBtn.textContent = task.completed ? 'UNDO' : 'DONE';
         const tempColor = completeBtn.style.backgroundColor;
         completeBtn.onmouseenter = () => { completeBtn.style.backgroundColor = 'lightgrey'; };
         completeBtn.onmouseleave = () => { completeBtn.style.backgroundColor = tempColor; };
