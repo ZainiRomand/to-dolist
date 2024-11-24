@@ -168,5 +168,18 @@ function saveTasks() {
 // Event listener for adding task
 addTaskBtn.addEventListener('click', addTask);
 
+// Get the input field
+const input = document.getElementById('task-input');
+
+input.addEventListener('keypress', function(event) {
+  // If the user presses the "Enter" key on the keyboard
+  if (event.key === "Enter") {
+    // Cancel the default action, if needed
+    event.preventDefault();
+    // Trigger the button element with a click
+    document.getElementById('add-task-btn').click();
+  }
+});
+
 // Render tasks on page load
 renderTasks();
