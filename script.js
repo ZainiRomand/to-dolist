@@ -8,6 +8,8 @@ const taskList = document.getElementById('task-list');
 
 // Function to render tasks
 function renderTasks() {
+    taskInput.focus();
+
     taskList.innerHTML = '';
 
     tasks.forEach((task, index) => {
